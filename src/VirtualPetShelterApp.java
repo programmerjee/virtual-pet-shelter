@@ -42,6 +42,7 @@ public class VirtualPetShelterApp {
 			case "3":
 				shelterPets.callTick(pets);
 				System.out.println("Which pet would you like to play with?");
+				shelterPets.showPetName(pets);
 				String chosenPet = input.next();
 				VirtualPet playPet = shelterPets.getPetNamed(chosenPet);
 				playPet.play();

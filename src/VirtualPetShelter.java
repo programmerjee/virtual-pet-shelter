@@ -34,8 +34,18 @@ public class VirtualPetShelter {
 		return myShelter.get(name);
 	}
 
-	public Collection<VirtualPet> showTypes(VirtualPet adoptablePet) {
-		return myShelter.values();
+	public void showPetName(VirtualPet adoptablePet) {
+
+		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
+			System.out.print(entry.getKey() + "\t");
+		}
+	}
+
+	public void showTypes(VirtualPet adoptablePet) {
+		for (Entry<String, VirtualPet> entry : myShelter.entrySet()) {
+			System.out.println("Name : " + entry.getKey() + "\tType: " + entry.getValue().getPetType());
+		}
+
 	}
 
 	public void callTick(VirtualPet adoptablePet) {
