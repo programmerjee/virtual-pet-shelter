@@ -56,6 +56,7 @@ public class VirtualPetShelter {
 			entries.water();
 		}
 	}
+
 	public boolean hasPets() {
 		return !myShelter.isEmpty();
 	}
