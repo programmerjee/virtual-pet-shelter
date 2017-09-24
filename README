@@ -1,0 +1,11 @@
+VirtualPet2 class stores instance variables of individual pets at the shelter. All nutrition, hydration, and interest levels are set to 50 upon intake. From this class, I can call methods: getPetName getPetType getPetInterest getPetNutrition getPetHydration
+
+VirtualPetShelter class holds the collection of current pets at the shelter, called myShelter. Individual pet values from the VirtualPet2 class are stored in adoptablePet. String petsAvailable refers to the value of a specific pet that is added or removed. Method showPets() will return a list of current pet names and types.
+
+This class also contains the methods: tick() (called each time a user interacts with a pet) play() increases interest level feed() increases nutrition level water() increases hydration level
+
+The boolean hasPets() is true if the shelter contains pets.
+
+The VirtualPetShelterApp stores individual pets from the VirtualPet2 class as pets shelterPets is the name of VirtualPetShelter instance in the app.
+
+While the shelter has pets, users can: feed the pets water the pets play with a pet adopt a pet admit a pet see a list of pets quit
