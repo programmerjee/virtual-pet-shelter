@@ -15,10 +15,10 @@ public class VirtualPetShelterApp {
 		VirtualPet strayCat = new VirtualPet("Miley", "tabbycat");
 		shelterPets.addPet(strayCat);
 		System.out.println("Welcome to the County Shelter!");
-	
-		String showMenu = "\n\t	What would you like to do next?\n" + "\n\t"
-				+ "1. Feed the pets\n\t" + "2. Water the pets\n\t" + "3. Play with a pet\n\t" + "4. Adopt a pet\n\t"
-				+ "5. Admit a pet\n\t" + "6. Show all pets.\n\t" + "7. Quit";
+
+		String showMenu = "\n\t	What would you like to do next?\n" + "\n\t" + "1. Feed the pets\n\t"
+				+ "2. Water the pets\n\t" + "3. Play with a pet\n\t" + "4. Adopt a pet\n\t" + "5. Admit a pet\n\t"
+				+ "6. Show all pets.\n\t" + "7. Quit";
 
 		String userChoice;
 		while (shelterPets.hasPets()) {
@@ -30,13 +30,13 @@ public class VirtualPetShelterApp {
 					&& !userChoice.equals("7"));
 			switch (userChoice) {
 			case "1":
-				shelterPets.feedPets(pets);
 				shelterPets.callTick(pets);
+				shelterPets.feedPets(pets);
 				System.out.println("The shelter pets have polished off the last of the dog bones.");
 				break;
 			case "2":
-				shelterPets.waterPets(pets);
 				shelterPets.callTick(pets);
+				shelterPets.waterPets(pets);
 				System.out.println("Your pets are starting to slobber all over you.  They've had enough water");
 				break;
 			case "3":
@@ -45,6 +45,7 @@ public class VirtualPetShelterApp {
 				String chosenPet = input.next();
 				VirtualPet playPet = shelterPets.getPetNamed(chosenPet);
 				playPet.play();
+				System.out.println(chosenPet + " had a lot of fun!  He's starting to get tired.");
 				break;
 			case "4":
 				shelterPets.callTick(pets);
