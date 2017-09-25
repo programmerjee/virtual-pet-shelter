@@ -58,13 +58,14 @@ public class VirtualPetShelterApp {
 				break;
 			case "5":
 				shelterPets.callTick(pets);
-				System.out.println("What will you name the homeless pet?");
+				System.out.println("What will you name the new pet?");
 				String homelessName = input.next();
 				System.out.println("What type of pet is it?");
 				String homelessType = input.next();
 				VirtualPet homelessPet = new VirtualPet(homelessName, homelessType);
 				shelterPets.addPet(homelessPet);
 				System.out.println("Welcome to your new home, " + homelessName);
+				break;
 			case "6":
 				System.out.println("These are the pets at our shelter:");
 				shelterPets.showPets(pets);
